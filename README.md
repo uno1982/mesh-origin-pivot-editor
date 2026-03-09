@@ -1,5 +1,7 @@
 # Mesh Origin Editor
 
+![Mesh Origin Editor thumbnail](screenshots/thumbnail.png)
+
 ![Mesh Origin Editor screenshot](screenshots/screenshot1.png)
 
 A Godot 4 editor plugin that lets you reposition the origin (pivot point) of a `MeshInstance3D` by baking a new offset directly into the mesh vertex data.
