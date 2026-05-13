@@ -69,7 +69,74 @@ allow_greater = true
 allow_lesser = true
 prefix = "Z"
 
+[node name="ResetOffsetBtn" type="Button" parent="CustomContainer/HBox"]
+custom_minimum_size = Vector2(24, 0)
+text = "↺"
+tooltip_text = "Reset offset to (0, 0, 0)"
+
 [node name="ApplyCustomBtn" type="Button" parent="CustomContainer"]
 disabled = true
 text = "Apply Custom Offset"
 tooltip_text = "Shifts all vertices by the given local-space offset."
+
+[node name="HSeparator4" type="HSeparator" parent="."]
+
+[node name="RotationContainer" type="VBoxContainer" parent="."]
+
+[node name="RotationLabel" type="Label" parent="RotationContainer"]
+text = "Custom rotation (degrees):"
+
+[node name="RotHBox" type="HBoxContainer" parent="RotationContainer"]
+
+[node name="RotationX" type="SpinBox" parent="RotationContainer/RotHBox"]
+custom_minimum_size = Vector2(55, 0)
+min_value = -360.0
+max_value = 360.0
+step = 1.0
+allow_greater = true
+allow_lesser = true
+prefix = "X"
+
+[node name="RotationY" type="SpinBox" parent="RotationContainer/RotHBox"]
+custom_minimum_size = Vector2(55, 0)
+min_value = -360.0
+max_value = 360.0
+step = 1.0
+allow_greater = true
+allow_lesser = true
+prefix = "Y"
+
+[node name="RotationZ" type="SpinBox" parent="RotationContainer/RotHBox"]
+custom_minimum_size = Vector2(55, 0)
+min_value = -360.0
+max_value = 360.0
+step = 1.0
+allow_greater = true
+allow_lesser = true
+prefix = "Z"
+
+[node name="ResetRotationBtn" type="Button" parent="RotationContainer/RotHBox"]
+custom_minimum_size = Vector2(24, 0)
+text = "↺"
+tooltip_text = "Reset rotation to (0, 0, 0)"
+
+[node name="HSeparator5" type="HSeparator" parent="."]
+
+[node name="RevertContainer" type="VBoxContainer" parent="."]
+
+[node name="RevertLabel" type="Label" parent="RevertContainer"]
+text = "Source Mesh:"
+
+[node name="RevertHBox" type="HBoxContainer" parent="RevertContainer"]
+
+[node name="RevertBtn" type="Button" parent="RevertContainer/RevertHBox"]
+size_flags_horizontal = 3
+disabled = true
+text = "Revert to Source"
+tooltip_text = "Restore the original mesh before any baked changes."
+
+[node name="SetBaselineBtn" type="Button" parent="RevertContainer/RevertHBox"]
+size_flags_horizontal = 3
+disabled = true
+text = "Set as Baseline"
+tooltip_text = "Save current state as the new source to revert to."
