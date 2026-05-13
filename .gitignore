@@ -3,3 +3,6 @@
 .import
 /android/
 export_presets.cfg
+
+# VS Code settings (machine-specific paths)
+.vscode/
